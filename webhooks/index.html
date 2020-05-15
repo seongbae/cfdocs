@@ -36,7 +36,7 @@
     
     
       
-        <title>Meeting - ChamberForge</title>
+        <title>Webhooks - ChamberForge</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#meeting" tabindex="0" class="md-skip">
+      <a href="#webhooks" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Meeting
+                Webhooks
               
             </span>
           
@@ -216,11 +216,63 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../webhooks/" title="Webhooks" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Webhooks
+      </label>
+    
+    <a href="./" title="Webhooks" class="md-nav__link md-nav__link--active">
       Webhooks
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-webhook" class="md-nav__link">
+    Create a webhook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-clients" class="md-nav__link">
+    Webhook clients
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    Video tutorial
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -257,57 +309,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-meeting" class="md-nav__link">
-    Create a Meeting
+  <a href="#create-a-webhook" class="md-nav__link">
+    Create a webhook
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#track-attendance" class="md-nav__link">
-    Track Attendance
+  <a href="#webhook-clients" class="md-nav__link">
+    Webhook clients
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#denote-substitute" class="md-nav__link">
-    Denote Substitute
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-guest" class="md-nav__link">
-    Add Guest
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-referral" class="md-nav__link">
-    Add Referral
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-1-to-1" class="md-nav__link">
-    Add 1-to-1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-business-closed" class="md-nav__link">
-    Add Business Closed
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#send-e-mails" class="md-nav__link">
-    Send E-mails
+  <a href="#video-tutorial" class="md-nav__link">
+    Video tutorial
   </a>
   
 </li>
@@ -329,50 +346,23 @@
               
                 
                 
-                <h1 id="meeting">Meeting</h1>
-<p>Tracking meetings and meeting attendance with ChamberForge is very easy.  This page walks you through how to create and manage meetings.</p>
-<h2 id="create-a-meeting">Create a Meeting</h2>
-<p>You can create a meeting by going to Meetings from left navigation menu and clicking on Add New.  You can create a meeting after a meeting has taken place or create for upcoming meetings.</p>
+                <h1 id="webhooks">Webhooks</h1>
+<p>Webhooks allow you to send data from ChamberForge to external systems.  A good example is, if you have a marketing automation or email marketing platform such as HubSpot, Marketo, or Active Campaign, you can use the webhooks feature to automatically send guest data from ChamberForge to those platforms.  Whenever your members add new guest into ChamberForge, it will automatically sync with external platforms.</p>
+<p>Since ChamberForge is not an email marketing or lead management platform, some groups utilize those external platforms to do further marketing to guests. If you are one of those groups, then webhooks will allow you to do that.  It will send new guest data, update existing data, and also delete data.  </p>
+<p>Webhooks are support on the following content types: guest, referral, 1-to-1.  Operations supported at create, update, and delete.  At this time, webhooks are supported only on the Group Plus plan.</p>
+<h2 id="create-a-webhook">Create a webhook</h2>
+<p>You can create webhooks by going to the Group Settings and Webhooks tab.  On this screen, you can add new webhooks, updating exsting ones, and delete webhooks.</p>
 <ul>
-<li><strong>Date</strong>: date of the meeting</li>
-<li><strong>Meeting Notes</strong>: any notes or description about the meeting (optional)</li>
+<li><strong>Type</strong>: Choose which content type you want to send</li>
+<li><strong>Action</strong>: Choose operation: created, updated, deleted</li>
+<li><strong>URL</strong>: Webhook client URL - where to send data</li>
 </ul>
-<p><img alt="Create meeting" src="images/mt-01-create-meeting.png" /></p>
-<p>You will be taken to the meeting details screen.</p>
-<p><img alt="Create meeting" src="images/mt-02-meeting-details.png" /></p>
-<h2 id="track-attendance">Track Attendance</h2>
-<p>After a meeting has been created, you can track attendance by going to the meeting details screen and clicking on Update Attendance button.  You will see members and guests of the group with checkbox next to their name.  Simply check the checkbox to denote the member or guest's meeting attendance.</p>
-<p>If you have a large group, checking each checkbox can be a tedious process.  You can check all by checking the topmost checkbox.</p>
-<p><img alt="Track attendance" src="images/mt-03-track-attendance.png" /></p>
-<h2 id="denote-substitute">Denote Substitute</h2>
-<p>If a member cannot make to a meeting and sends a subsitute in his or her place, you can denote that a substitute attended the meeting.</p>
-<p>Simply click on the plus (+) sign next to Substitute and select the member who sent a substitute in his or her place.</p>
-<p>Substitute information will be displayed accordingly throughout the meeting data and reports.  To remove substitute information, simply click on Remove link next to the name.</p>
-<p><img alt="Track attendance" src="images/mt-04-denote-substitute.png" /></p>
-<h2 id="add-guest">Add Guest</h2>
-<p>In addition to being able to add guests through the Guests page, you can also add them through each meeting details page.  </p>
-<p>From meeting details page, click on the Guests tab and then Add New Guest button at the bottom.  When a window opens, fill in guest information and click on Save.  </p>
-<p><img alt="Track attendance" src="images/mt-05-add-guest.png" /></p>
-<h2 id="add-referral">Add Referral</h2>
-<p>Similar to guests, referrals can be added from meeting details screen.  </p>
-<p>From meeting details page, click on the Referrals tab and then Add New button at the bottom.  When a window opens, fill in referral information and click on Save.  The referral will automatically be associated with the current meeting.</p>
-<p>The only required information is name field.  All other fields are optional.</p>
-<p><img alt="Track attendance" src="images/mt-06-add-referral.png" /></p>
-<h2 id="add-1-to-1">Add 1-to-1</h2>
-<p>Similar to guests and referrals, 1-to-1s can be added from meeting details screen as well.  </p>
-<p>From meeting details page, click on the 1-to-1s tab and then Add New button at the bottom.  When a window opens, fill in the 1-to-1 meeting information and click on Save.  The 1-to-1 will automatically be associated with the current meeting.</p>
-<p>First member and Second member are both required.</p>
-<p><img alt="Track attendance" src="images/mt-07-add-1-to-1.png" /></p>
-<h2 id="add-business-closed">Add Business Closed</h2>
-<p>Similar to guests and referrals, business closed can be added from meeting details screen.  </p>
-<p>From meeting details page, click on the Business Closed tab and then Add New button at the bottom.  When a window opens, fill in the business closed information and click on Save.  The business closed will automatically be associated with the current meeting.</p>
-<p>The only required information is name field.  All other fields are optional.</p>
-<p><img alt="Track attendance" src="images/mt-08-add-business-closed.png" /></p>
-<h2 id="send-e-mails">Send E-mails</h2>
-<p>You can send an e-mail to all meeting attendees.  Click on the Attendance tab from meeting details screen, check the checkbox next to each attendee, and click on the Send E-mail button.  You can select all attendees by checking the topmost checkbox.</p>
-<p>ChamberForge currently does not archive emails sent from the system.  If you wish to keep an archive of emails sent out, you can check the checkbox to have a copy sent to your email.</p>
-<p><img alt="Select attendees" src="images/mt-10-send-emails.png" /></p>
-<p><img alt="Write e-mail" src="images/mt-09-send-emails.png" /></p>
+<p><img alt="Add a referral" src="../images/webhooks-01.jpg" /></p>
+<h2 id="webhook-clients">Webhook clients</h2>
+<p>Not all external tools support receiving webhooks.  We recommend integrating with <a href="https://zapier.com" target="_blank">Zapier</a> which connects with many applications out there.</p>
+<h2 id="video-tutorial">Video tutorial</h2>
+<p>You can also watch the below YouTube video on more detailed walkthrough of how to creat and manage webhooks.</p>
+<p><a href="https://www.youtube.com/watch?v=UBGLHc15JfA" target="_blank" title="ChamberForge Webhook Tutorial"><img alt="alt text" src="https://img.youtube.com/vi/UBGLHc15JfA/0.jpg" /></a> </p>
                 
                   
                 
@@ -390,6 +380,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../reporting/" title="Reporting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Reporting
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                API
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
